@@ -36,3 +36,9 @@ interface utilisateur dynamique.
 - Interface graphique affichant les notes descendantes
 - Détection en temps réel des correspondances entre notes attendues et touches jouées
 - Système de score ou retour visuel en cas d’erreur/réussite
+
+### Pour lancer l'interface graphique : 
+- Créer un dossier du nom de votre choix
+- Mettre le sketch dedans
+- Créer un dossier dans ce même dossier que vous appelerez "data"
+- Insérer les fichiers "Son Menu.mp3", "fond.jpg" et "logo ece.png"
