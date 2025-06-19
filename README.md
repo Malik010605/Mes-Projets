@@ -1,6 +1,6 @@
 # Malik Saadi - Projets de programmation
 
-Bienvenue sur mon dépôt GitHub. Je suis actuellement élève en deuxième année de classe préparatoire scientifique à l’ECE Paris. Vous trouverez ici une sélection de mes projets réalisés en C, C++, Python, Arduino et Java.
+Bienvenue sur mon dépôt GitHub. J'entre en deuxième année de classe préparatoire scientifique à l’ECE Paris. Vous trouverez ici une sélection de mes projets réalisés en C, C++, Python, Arduino et Java.
 
 ## Projets en C
 
