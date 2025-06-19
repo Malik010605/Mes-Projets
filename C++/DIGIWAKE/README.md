@@ -33,14 +33,6 @@ boutons de navigation, et déclenchement sonore à l’heure programmée.
 - Déclenchement d’un signal sonore (buzzer)
 - Possibilité d’interrompre ou de reporter l’alarme
 
-## Installation et utilisation
-
-1. Ouvrir le fichier `digiwake.ino` dans l’IDE Arduino.
-2. Installer les bibliothèques nécessaires.
-3. Connecter les composants comme indiqué dans le schéma fourni.
-4. Uploader le code vers la carte Arduino.
-5. Utiliser les boutons pour régler l’heure et l’alarme.
-
 ## Améliorations possibles
 
 - Ajout d’un écran OLED
