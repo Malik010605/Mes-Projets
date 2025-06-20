@@ -3,12 +3,12 @@
 Ce dépôt contient le code source du site vitrine développé pour **Vortex Global Trading**, une société spécialisée
 dans l’importation et la distribution de pièces détachées à destination de l’Algérie.
 
-## #### Objectif du projet
+#### Objectif du projet
 
 Concevoir un site web professionnel, statique et responsive, avec une structure claire, un design soigné et un en-tête
 animé. Le site est entièrement codé en HTML, CSS et JavaScript, sans framework ni CMS.
 
-## #### Compétences techniques mobilisées
+#### Compétences techniques mobilisées
 
 ### HTML5
 - Structure sémantique rigoureuse
@@ -32,7 +32,7 @@ animé. Le site est entièrement codé en HTML, CSS et JavaScript, sans framewor
 - Code clair et organisé, séparé par type (structure, style, logique)
 - Préparation à l’ajout de futures pages (services, contact...)
 
-## #### Prochaines améliorations prévues
+#### Prochaines améliorations prévues
 
 - Intégration fonctionnelle du bouton de changement de langue
 - Déploiement en ligne (à venir)
