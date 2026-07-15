@@ -1,116 +1,128 @@
-# PlaceToBe AI — Machine Learning & Data Engineering
+# Stage 1 – Pipeline de prédiction de prix immobiliers
 
-Ce dépôt regroupe l’ensemble des travaux réalisés autour du projet **PlaceToBe AI**, avec un focus sur  
-l’analyse de données immobilières (DVF), le machine learning, l’expérimentation algorithmique et la mise en production via Streamlit.
+## Présentation
 
-Il contient à la fois :
-- des algorithmes d’entraînement,
-- des notebooks d’exploration,
-- des scripts de collecte de données,
-- une application Streamlit complète de prédiction des prix immobiliers.
+Ce projet a été réalisé dans le cadre de mon premier stage en Data Science et Machine Learning.
 
+L'objectif était de développer un pipeline complet permettant de prédire le **prix au mètre carré de biens immobiliers** à partir des données publiques DVF (Demandes de Valeurs Foncières), tout en expérimentant différentes approches de modélisation, de prétraitement et de visualisation.
 
-## Structure du dépôt
+Le projet couvre l'ensemble du cycle de vie d'un modèle de Machine Learning : collecte des données, nettoyage, feature engineering, entraînement, optimisation et déploiement d'une interface interactive.
 
-### `.idea/`
-Fichiers de configuration de l’environnement de développement (IDE).
-  
-> Dossier technique, non utilisé par le code applicatif.
+---
 
+## Objectifs du projet
 
+- Construire un pipeline complet de traitement des données
+- Nettoyer et enrichir les données DVF
+- Comparer plusieurs modèles de Machine Learning
+- Optimiser les performances des modèles
+- Intégrer une composante géographique dans les prédictions
+- Développer une interface interactive de visualisation
 
-### `.streamlit/`
-Configuration visuelle de l’application Streamlit.
-
-Contient notamment :
-- le thème (couleurs, typographie),
-- les paramètres d’interface (layout, sidebar).
-
-Objectif : assurer une cohérence graphique avec l’identité **PlaceToBe AI** (violet / blanc crème).
-
-
-
-### `Algos entrainement/`
-Implémentations des algorithmes de machine learning utilisés dans le projet.
-
-On y retrouve :
-- des scripts d’entraînement et de test,
-- des modèles de régression (Ridge),
-- du clustering géographique (KMeans),
-- des modèles avancés de type **XGBoost**,
-- des pipelines séparant tendance temporelle et résidus.
-
-Ces scripts servent de base aux modèles intégrés ensuite dans l’application Streamlit.
-
-
-
-### `Notebooks/`
-Notebooks Jupyter dédiés à l’exploration et à l’expérimentation.
-
-Ils incluent :
-- analyses exploratoires des données DVF,
-- tests de features,
-- visualisations intermédiaires,
-- essais de modèles et de paramètres.
-
-Objectif : comprendre les données et valider les choix méthodologiques avant industrialisation.
-
-
-
-### `Scrapper/`
-Scripts de collecte et de préparation des données.
-
-Ce dossier contient :
-- des outils de récupération de données brutes,
-- des scripts de pré-traitement,
-- des étapes intermédiaires avant nettoyage et modélisation.
-
-Il s’inscrit dans la chaîne complète **data → features → modèle**.
-
-
-
-### `V0 prediction prix/`
-Première version fonctionnelle de l’application de prédiction des prix immobiliers.
-
-On y trouve :
-- le pipeline complet DVF (nettoyage, features, split temporel),
-- l’entraînement des modèles,
-- une application **Streamlit** interactive permettant :
-  - de lancer l’entraînement,
-  - de visualiser les métriques (MAE train / val / test),
-  - d’analyser les erreurs,
-  - d’explorer les résultats sur une carte interactive.
-
-Cette version sert de base pédagogique et technique pour les évolutions futures.
-
-
+---
 
 ## Technologies utilisées
 
 - Python
-- Streamlit
-- Pandas / NumPy
+- Pandas
+- NumPy
 - Scikit-learn
 - XGBoost
+- Streamlit
 - Plotly
 - PyDeck
+- Optuna
+- Jupyter Notebook
 
+---
 
+## Contenu du projet
 
-## Objectif du projet
+### Entraînement des modèles
 
-L’objectif global de ce repository est de :
-- construire une **chaîne complète de traitement de données immobilières**,
-- tester et comparer des approches de modélisation,
-- produire une application interactive claire et exploitable,
-- poser les bases d’un moteur de scoring géospatial pour le retail et l’immobilier.
+Le dépôt contient plusieurs implémentations d'algorithmes utilisées pour comprendre, comparer ou entraîner différents modèles :
 
+- Régression
+- Descente de gradient
+- K-Nearest Neighbors (KNN)
+- K-Means
+- Analyse en composantes principales (PCA)
 
+---
 
-## Statut
+### Préparation des données
 
-Projet en cours d’évolution.  
-Le dépôt est organisé pour permettre :
-- l’expérimentation,
-- la montée en qualité des modèles,
-- et la préparation à une mise en production progressive.
+Plusieurs scripts sont dédiés au traitement des données :
+
+- nettoyage des fichiers DVF ;
+- fusion de plusieurs jeux de données ;
+- géocodage ;
+- création de nouvelles variables ;
+- calcul d'indicateurs géographiques.
+
+---
+
+### Exploration des données
+
+Des notebooks Jupyter permettent de réaliser :
+
+- l'analyse exploratoire des données ;
+- des visualisations statistiques ;
+- des expérimentations sur différents modèles ;
+- des comparaisons de performances.
+
+---
+
+### Modèle de prédiction
+
+Le pipeline principal repose sur plusieurs étapes :
+
+- préparation des données ;
+- création des variables explicatives ;
+- séparation temporelle des jeux d'entraînement, validation et test ;
+- apprentissage des modèles ;
+- optimisation des hyperparamètres avec Optuna ;
+- évaluation des performances.
+
+Une approche combinant une tendance temporelle et un modèle XGBoost est également étudiée afin d'améliorer la précision des prédictions.
+
+---
+
+### Application Streamlit
+
+Une application interactive permet de :
+
+- lancer les prédictions ;
+- visualiser les performances du modèle ;
+- explorer les résultats ;
+- afficher différentes statistiques et graphiques.
+
+---
+
+## Compétences développées
+
+- Data Engineering
+- Data Cleaning
+- Feature Engineering
+- Analyse exploratoire de données
+- Machine Learning supervisé
+- Clustering
+- Réduction de dimension
+- Optimisation d'hyperparamètres
+- Visualisation de données
+- Développement d'applications Streamlit
+
+---
+
+## Améliorations possibles
+
+- Intégration de nouvelles sources de données
+- Déploiement du modèle via une API
+- Mise à jour automatique des données
+- Explicabilité des prédictions (SHAP)
+- Entraînement distribué sur des jeux de données plus importants
+- Déploiement cloud
+
+---
+
+Ce projet m'a permis d'acquérir une expérience concrète dans la conception d'un pipeline complet de **Machine Learning**, allant de la préparation de données réelles jusqu'au développement d'une application interactive de visualisation et de prédiction.
