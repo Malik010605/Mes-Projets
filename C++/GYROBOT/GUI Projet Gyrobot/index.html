@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gyrobot Interface</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="page">
+
+        <!-- NAVBAR -->
+        <header class="navbar">
+            <div class="brand">
+            <div class="brand-logo">
+                <img src="assets/logo_gyrobot.png" alt="Logo Gyrobot">
+            </div>
+                <div>
+                    <h1>Gyrobot</h1>
+                    <p>Interface de contrôle et de supervision en temps réel</p>
+                </div>
+            </div>
+
+            <div class="group-badge">
+                <span>Groupe</span>
+                <strong>#S4S25-G-2389</strong>
+            </div>
+
+            <div class="navbar-status">
+                <div class="status-pill ok" id="connectionStatus">
+                    <span></span>
+                    Connecté
+                </div>
+
+                <div class="status-pill ok" id="imuStatus">
+                    <span></span>
+                    IMU OK
+                </div>
+
+                <div class="status-pill ok" id="magStatus">
+                    <span></span>
+                    MAG OK
+                </div>
+
+                <div class="status-pill ok" id="encoderStatus">
+                    <span></span>
+                    Encodeurs OK
+                </div>
+
+                <div class="battery">
+                    Batterie <strong id="batteryValue">-- %</strong>
+                </div>
+            </div>
+        </header>
+
+        <!-- HERO / COMMAND CENTER -->
+        <section class="hero">
+
+            <!-- LEFT CONTROL AREA -->
+<aside class="control-card remote-card">
+    <div class="remote-header">
+        <div>
+            <span class="eyebrow">Pilotage</span>
+            <h2>Télécommande</h2>
+        </div>
+
+        <div class="remote-mode">
+            <span></span>
+            Manuel
+        </div>
+    </div>
+
+    <div class="remote-screen">
+        <span>Commande active</span>
+        <strong id="currentCommand">STOP</strong>
+        <small id="remoteHint">Robot en attente</small>
+    </div>
+
+    <div class="remote-pad">
+        <button class="remote-btn remote-forward" data-command="forward">
+            <span class="arrow">▲</span>
+            <strong>Avancer</strong>
+        </button>
+
+        <button class="remote-btn remote-left" data-command="left">
+            <span class="arrow">◀</span>
+            <strong>Gauche</strong>
+        </button>
+
+        <button class="remote-btn remote-stop" data-command="stop">
+            <span class="stop-core">STOP</span>
+        </button>
+
+        <button class="remote-btn remote-right" data-command="right">
+            <span class="arrow">▶</span>
+            <strong>Droite</strong>
+        </button>
+
+        <button class="remote-btn remote-backward" data-command="backward">
+            <span class="arrow">▼</span>
+            <strong>Reculer</strong>
+        </button>
+    </div>
+
+    <div class="speed-console">
+        <div class="speed-console-top">
+            <div>
+                <span>Puissance moteur</span>
+                <strong id="speedValue">50 %</strong>
+            </div>
+
+            <div class="speed-chip">PWM</div>
+        </div>
+
+        <input type="range" id="speedRange" min="0" max="100" value="50">
+
+        <div class="speed-scale">
+            <span>Lent</span>
+            <span>Normal</span>
+            <span>Rapide</span>
+        </div>
+    </div>
+
+    <div class="remote-actions">
+        <button id="resetTrajectoryBtn">
+            <span>↺</span>
+            Reset trajectoire
+        </button>
+
+        <button id="calibrateBtn">
+            <span>◎</span>
+            Calibration
+        </button>
+    </div>
+    
+    <div class="sequence-panel">
+        <div class="sequence-panel-top">
+            <span>SÃ©quences</span>
+            <strong id="sequenceStatus">idle</strong>
+        </div>
+
+        <button id="stairSequenceBtn">SÃ©quence 1 â€” Escalier</button>
+        <div class="circle-sequence-control">
+            <label for="circleRadius">Rayon cercle</label>
+            <div>
+                <input type="number" id="circleRadius" min="2" max="20" value="10" step="0.5">
+                <select id="circleDirection">
+                    <option value="left">Gauche</option>
+                    <option value="right">Droite</option>
+                </select>
+            </div>
+        </div>
+        <button id="circleSequenceBtn">SÃ©quence 2 â€” Cercle</button>
+        <button id="turnInPlaceBtn">Tourner</button>
+        <button id="northArrowSequenceBtn">SÃ©quence 3 â€” FlÃ¨che Nord</button>
+
+        <small id="sequenceStep">Aucune sÃ©quence active</small>
+    </div>
+</aside>
+
+            <!-- CENTER MAP AREA -->
+            <section class="map-card">
+                <div class="map-top">
+                    <div>
+                        <span>Position du robot</span>
+                        <h2>Trajectoire en temps réel</h2>
+                    </div>
+
+                    <div class="map-metrics">
+                        <div>
+                            <span>X</span>
+                            <strong id="poseEncX">-- cm</strong>
+                        </div>
+                        <div>
+                            <span>Y</span>
+                            <strong id="poseEncY">-- cm</strong>
+                        </div>
+                        <div>
+                            <span>θ</span>
+                            <strong id="poseEncTheta">-- °</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map-zone">
+                    <canvas id="trajectoryCanvas" width="1000" height="380"></canvas>
+
+                    <div class="axis-label axis-y">Y+</div>
+                    <div class="axis-label axis-x">X+</div>
+                </div>
+
+                <div class="map-bottom">
+                    <div class="orientation-box">
+                        <span>Orientation</span>
+                        <div class="orientation-line">
+                            <div class="mini-compass">
+                                <div id="compassNeedle" class="needle"></div>
+                            </div>
+                            <strong id="orientationText">-- °</strong>
+                        </div>
+                    </div>
+
+                    <div class="pen-box">
+                        <span>Position du stylo</span>
+                        <strong id="penPositionValue">X -- / Y --</strong>
+                    </div>
+
+                    <div class="distance-box">
+                        <span>Distance depuis départ</span>
+                        <strong id="distanceValue">-- cm</strong>
+                    </div>
+                </div>
+            </section>
+
+            <!-- RIGHT LIVE STATUS -->
+            <aside class="live-card">
+                <div class="section-title">
+                    <span>État robot</span>
+                    <h2>Données instantanées</h2>
+                </div>
+
+                <div class="live-state">
+                    <div>
+                        <span>État pose</span>
+                        <strong id="poseStateValue">Stable</strong>
+                    </div>
+
+                    <div>
+                        <span>Alerte</span>
+                        <strong id="alertText">Aucune</strong>
+                    </div>
+                </div>
+
+                <div class="wheel-preview">
+                    <h3>Vitesse roues</h3>
+
+                    <div class="wheel-line">
+                        <div class="wheel-info">
+                            <span>Gauche</span>
+                            <strong id="leftRpmValue">-- tr/min</strong>
+                        </div>
+                        <div class="bar">
+                            <div id="leftRpmBar"></div>
+                        </div>
+                    </div>
+
+                    <div class="wheel-line">
+                        <div class="wheel-info">
+                            <span>Droite</span>
+                            <strong id="rightRpmValue">-- tr/min</strong>
+                        </div>
+                        <div class="bar">
+                            <div id="rightRpmBar"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="log-card">
+                    <h3>Journal</h3>
+                    <div id="logList" class="log-list"></div>
+                </div>
+            </aside>
+
+        </section>
+
+        <!-- LOWER DATA STRIP -->
+        <section class="data-strip">
+
+            <article class="sensor-panel">
+                <div class="sensor-title">
+                    <span>IMU</span>
+                    <h3>Accéléromètre</h3>
+                </div>
+
+                <div class="sensor-values">
+                    <div>
+                        <span>Ax</span>
+                        <strong id="axValue">--</strong>
+                        <small>g</small>
+                    </div>
+                    <div>
+                        <span>Ay</span>
+                        <strong id="ayValue">--</strong>
+                        <small>g</small>
+                    </div>
+                    <div>
+                        <span>Az</span>
+                        <strong id="azValue">--</strong>
+                        <small>g</small>
+                    </div>
+                </div>
+            </article>
+
+            <article class="sensor-panel">
+                <div class="sensor-title">
+                    <span>IMU</span>
+                    <h3>Gyroscope</h3>
+                </div>
+
+                <div class="sensor-values">
+                    <div>
+                        <span>Gx</span>
+                        <strong id="gxValue">--</strong>
+                        <small>°/s</small>
+                    </div>
+                    <div>
+                        <span>Gy</span>
+                        <strong id="gyValue">--</strong>
+                        <small>°/s</small>
+                    </div>
+                    <div>
+                        <span>Gz</span>
+                        <strong id="gzValue">--</strong>
+                        <small>°/s</small>
+                    </div>
+                </div>
+            </article>
+
+            <article class="sensor-panel">
+                <div class="sensor-title">
+                    <span>Magnétomètre</span>
+                    <h3>Champ magnétique</h3>
+                </div>
+
+                <div class="sensor-values">
+                    <div>
+                        <span>Mx</span>
+                        <strong id="mxValue">--</strong>
+                        <small>µT</small>
+                    </div>
+                    <div>
+                        <span>My</span>
+                        <strong id="myValue">--</strong>
+                        <small>µT</small>
+                    </div>
+                    <div>
+                        <span>Mz</span>
+                        <strong id="mzValue">--</strong>
+                        <small>µT</small>
+                    </div>
+                </div>
+            </article>
+
+            <article class="sensor-panel">
+                <div class="sensor-title">
+                    <span>Odométrie</span>
+                    <h3>Encodeurs</h3>
+                </div>
+
+                <div class="sensor-values">
+                    <div>
+                        <span>Ticks G</span>
+                        <strong id="leftTicksValue">--</strong>
+                    </div>
+                    <div>
+                        <span>Ticks D</span>
+                        <strong id="rightTicksValue">--</strong>
+                    </div>
+                    <div>
+                        <span>Écart</span>
+                        <strong id="wheelDeltaValue">--</strong>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- HIDDEN BUT KEPT FOR JS COMPATIBILITY -->
+        <div class="hidden-values">
+            <span id="imuXValue">--</span>
+            <span id="imuYValue">--</span>
+            <span id="imuThetaValue">--</span>
+            <span id="encXValue">--</span>
+            <span id="encYValue">--</span>
+            <span id="encThetaValue">--</span>
+        </div>
+
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
