@@ -1,0 +1,87 @@
+package algorithmes;
+
+import java.io.*;
+import java.util.*;
+import Graphe.*;
+
+public class Theme3Cas1 {
+    public static Map<Sommets, Integer> calculer(String nomFichier) throws IOException {
+
+        Graphe graphe = new Graphe();
+        Map<String, Sommets> noms = new HashMap<>();
+
+        try (BufferedReader br = new BufferedReader(new FileReader(nomFichier))) {
+            String ligne;
+            while ((ligne = br.readLine()) != null) {
+                ligne = ligne.trim();
+                if (ligne.isEmpty() || ligne.startsWith("#")) continue;
+
+                String[] parts = ligne.split(";");
+                if (parts.length < 2) continue;   //ligne invalide
+
+                String n1 = parts[0].trim();
+                String n2 = parts[1].trim();
+
+                Sommets s1 = noms.get(n1);
+                if (s1 == null) {
+                    s1 = new Sommets(n1);       //adapte le constructeur si besoin
+                    graphe.ajouterSommet(s1);
+                    noms.put(n1, s1);
+                }
+                Sommets s2 = noms.get(n2);
+                if (s2 == null) {
+                    s2 = new Sommets(n2);
+                    graphe.ajouterSommet(s2);
+                    noms.put(n2, s2);
+                }
+
+                //on rend le graphe NON orienté : deux arcs opposés, poids inutile ici
+                graphe.ajouterArc(s1, s2, 1.0);
+                graphe.ajouterArc(s2, s1, 1.0);
+            }
+        }
+
+        List<Sommets> sommets = new ArrayList<>(graphe.getSommets());
+        Map<Sommets, Integer> degre = new HashMap<>();
+        for (Sommets s : sommets) {
+            degre.put(s, graphe.getAdjacent(s).size());
+        }
+
+        //tri des sommets par degré décroissant
+        sommets.sort((s1, s2) -> Integer.compare(degre.get(s2), degre.get(s1)));
+
+        Map<Sommets, Integer> couleur = new HashMap<>();
+        int currentColor = 0;
+
+        for (int i = 0; i < sommets.size(); i++) {
+            Sommets s = sommets.get(i);
+            if (couleur.containsKey(s)) continue;  //déjà coloré
+
+            currentColor++;
+            couleur.put(s, currentColor);
+
+            //essayer de colorier d'autres sommets avec la même couleur
+            for (int j = i + 1; j < sommets.size(); j++) {
+                Sommets t = sommets.get(j);
+                if (!couleur.containsKey(t) && peutPrendreCouleur(graphe, t, currentColor, couleur)) {
+                    couleur.put(t, currentColor);
+                }
+            }
+        }
+
+        return couleur;
+    }
+
+    //vérifie si t peut être coloré avec c (aucun voisin déjà coloré c)
+    private static boolean peutPrendreCouleur(Graphe graphe,
+                                              Sommets t,
+                                              int c,
+                                              Map<Sommets, Integer> couleur) {
+        for (Arc arc : graphe.getAdjacent(t)) {
+            Sommets v = arc.getArrivee();
+            Integer colVoisin = couleur.get(v);
+            if (colVoisin != null && colVoisin == c) return false;
+        }
+        return true;
+    }
+}

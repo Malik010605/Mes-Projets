@@ -1,0 +1,34 @@
+package algorithmes;
+
+import java.io.IOException;
+import java.util.Map;
+import Graphe.Sommets;
+
+public class Theme3Main {
+
+    public static void main(String[] args) {
+        try {
+            System.out.println("=== CAS 1 : Coloration Welsh & Powell (planification des jours) ===");
+
+            //application de Welsh & Powell sur le graphe orientee
+            Map<Sommets, Integer> couleurs = Theme3Cas1.calculer("GrapheOrientee");
+
+            //affichage de la couleur associée à chaque sommet 
+            for (Map.Entry<Sommets, Integer> entry : couleurs.entrySet()) {
+                Sommets s = entry.getKey();
+                Integer c = entry.getValue();
+                System.out.println("Sommet " + s.getNom() + " -> couleur (jour) " + c);
+            }
+
+            System.out.println();
+            System.out.println("=== CAS 2 : Coloration + contraintes de capacité (tournées de ramassage) ===");
+
+            //recoloration et simulation de la collecte 
+            Theme3Cas2.calculer();
+
+        } catch (IOException e) {
+            System.err.println("Erreur lors de la lecture des fichiers : " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+}

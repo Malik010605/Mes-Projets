@@ -1,0 +1,176 @@
+package algorithmes;
+
+import java.io.*;
+import java.util.*;
+import Graphe.*;
+
+public class Theme3Cas2 {
+
+    
+    private static final int NB_CAMIONS = 2;
+    private static final int CAPACITE_CAMION = 16;
+
+    public static void calculer() throws IOException {
+        Graphe graphe = new Graphe();
+        Map<String, Sommets> noms = new HashMap<>();
+
+        try (BufferedReader br = new BufferedReader(new FileReader("GrapheOrientee"))) {
+            String ligne;
+            while ((ligne = br.readLine()) != null) {
+
+                ligne = ligne.trim();
+                if (ligne.isEmpty() || ligne.startsWith("#")) continue;
+
+                String[] parts = ligne.split(";");
+                if (parts.length < 2) continue;
+
+                String n1 = parts[0].trim();
+                String n2 = parts[1].trim();
+
+                //récupération des sommets
+                Sommets s1 = noms.get(n1);
+                if (s1 == null) {
+                    s1 = new Sommets(n1);
+                    graphe.ajouterSommet(s1);
+                    noms.put(n1, s1);
+                }
+
+                Sommets s2 = noms.get(n2);
+                if (s2 == null) {
+                    s2 = new Sommets(n2);
+                    graphe.ajouterSommet(s2);
+                    noms.put(n2, s2);
+                }
+
+                //graphe NON orienté 
+                graphe.ajouterArc(s1, s2, 1.0);
+                graphe.ajouterArc(s2, s1, 1.0);
+            }
+        }
+
+        List<Sommets> sommets = new ArrayList<>(graphe.getSommets());
+        Map<Sommets, Integer> quantite = new HashMap<>();
+
+        try (BufferedReader br = new BufferedReader(new FileReader("GraphePonderee"))) {
+            String ligne;
+            while ((ligne = br.readLine()) != null) {
+
+                ligne = ligne.trim();
+                if (ligne.isEmpty() || ligne.startsWith("#")) continue;
+
+                String[] parts = ligne.split(";");
+                if (parts.length < 2) continue;
+
+                String nom = parts[0].trim();
+                int q = Integer.parseInt(parts[1].trim());
+
+                Sommets s = noms.get(nom);
+
+                //on vérifie que le sommet existe dans le graphe 
+                if (s != null) {
+                    quantite.put(s, q);
+                }
+            }
+        }
+
+
+        
+        //Welsh&Powell
+        Map<Sommets, Integer> degre = new HashMap<>();
+        for (Sommets s : sommets) {
+            degre.put(s, graphe.getAdjacent(s).size());
+        }
+
+        sommets.sort((s1, s2) -> Integer.compare(degre.get(s2), degre.get(s1)));
+
+        Map<Sommets, Integer> couleur = new HashMap<>();
+        int currentColor = 0;
+
+        for (int i = 0; i < sommets.size(); i++) {
+
+            Sommets s = sommets.get(i);
+            if (couleur.containsKey(s)) continue; //déjà coloré à un tour précédent
+
+            currentColor++;
+            couleur.put(s, currentColor);
+
+            //on colorie un maximum de sommets compatibles
+            for (int j = i + 1; j < sommets.size(); j++) {
+                Sommets t = sommets.get(j);
+
+                //t peut prendre la couleur si aucun voisin n'a cette couleur
+                if (!couleur.containsKey(t)
+                        && peutPrendreCouleur(graphe, t, currentColor, couleur)) {
+                    couleur.put(t, currentColor);
+                }
+            }
+        }
+
+        int nbCouleurs = currentColor;
+
+
+        
+        //simulation de la collecte jour par jour
+        Map<Sommets, Integer> restant = new HashMap<>(quantite);
+        int capaciteJour = NB_CAMIONS * CAPACITE_CAMION;
+
+        int jour = 1;
+        while (resteDesDechets(restant)) {
+
+            //cycle des couleurs 
+            int couleurDuJour = ((jour - 1) % nbCouleurs) + 1;
+            int capaciteRestante = capaciteJour;
+
+            System.out.println("Jour " + jour + " (couleur " + couleurDuJour +
+                    "), capacité = " + capaciteRestante);
+
+            //on visite que les sommets de la couleur du jour
+            for (Sommets s : sommets) {
+
+                if (capaciteRestante == 0) break;
+                if (!couleur.get(s).equals(couleurDuJour)) continue;
+
+                int r = restant.getOrDefault(s, 0);
+                if (r <= 0) continue;
+
+                //quantité réellement collectée
+                int collecte = Math.min(r, capaciteRestante);
+                restant.put(s, r - collecte);
+                capaciteRestante -= collecte;
+
+                System.out.println("  - Collecte " + collecte +
+                        " déchets sur " + s.getNom() +
+                        " (reste " + restant.get(s) + ")");
+            }
+
+            System.out.println("  Capacité restante fin jour " + jour + " : " + capaciteRestante);
+            System.out.println();
+            jour++;
+        }
+
+        System.out.println("Tous les déchets ont été collectés.");
+    }
+
+
+    //vérification que t n'est adjacent à aucun sommet coloré c
+    private static boolean peutPrendreCouleur(Graphe graphe,
+                                              Sommets t,
+                                              int c,
+                                              Map<Sommets, Integer> couleur) {
+        for (Arc arc : graphe.getAdjacent(t)) {
+            Sommets v = arc.getArrivee();
+            Integer colVoisin = couleur.get(v);
+
+            if (colVoisin != null && colVoisin == c) return false;
+        }
+        return true;
+    }
+
+    //vérifiaction s'il reste des déchets non collectés
+    private static boolean resteDesDechets(Map<Sommets, Integer> restant) {
+        for (int r : restant.values()) {
+            if (r > 0) return true;
+        }
+        return false;
+    }
+}
