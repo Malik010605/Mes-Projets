@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VoyageVista - Accueil</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div class="header-title">
+      <img class="site-logo" src="assets/images/logo-voyagevista.png" alt="Logo VoyageVista">
+      <div>
+        <h1>VoyageVista</h1>
+        <p>Plateforme de planification de voyages et de séjours</p>
+      </div>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="destinations.php">Destinations</a></li>
+        <li><a href="transports.php">Transports</a></li>
+        <li><a href="hebergements.php">Hébergements</a></li>
+        <li><a href="activites.php">Activités</a></li>
+        <li><a href="sejour.php">Mon séjour</a></li>
+        <li><a href="panier.php">Panier</a></li>
+        <li><a href="connexion.php">Connexion</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h2>Organisez un voyage complet en quelques etapes</h2>
+        <p>
+          VoyageVista permet de choisir une destination, de comparer les transports,
+          de sélectionner un hébergement et d'ajouter des activités dans un même séjour.
+        </p>
+        <p>
+          Le projet garde un fonctionnement simple : les réservations et le paiement sont simulés,
+          mais le parcours reste proche d'une vraie application web dynamique.
+        </p>
+
+        <div class="hero-links">
+          <a class="button-link" href="destinations.php">Voir les destinations</a>
+          <a class="second-link" href="connexion.php">Se connecter</a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img class="hero-img" src="assets/images/hero-voyagevista.png" alt="Voyageurs qui préparent un séjour avec VoyageVista">
+      </div>
+
+      <div class="hero-box">
+        <h3>Parcours prevu</h3>
+        <ol>
+          <li>Choisir une destination</li>
+          <li>Ajouter un transport</li>
+          <li>Choisir un hébergement</li>
+          <li>Compléter avec des activités</li>
+          <li>Valider le panier</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="features">
+      <h2>Fonctionnalites principales</h2>
+
+      <div class="feature-list">
+        <article>
+          <span class="tag">01</span>
+          <h3>Destinations</h3>
+          <p>Consulter les lieux proposés, afficher les détails et rechercher une offre adaptée.</p>
+          <p><a href="destinations.php">Explorer les destinations</a></p>
+        </article>
+
+        <article>
+          <span class="tag">02</span>
+          <h3>Transports</h3>
+          <p>Comparer les trajets et vérifier la cohérence entre les dates, les villes et les places.</p>
+          <p><a href="transports.php">Voir les transports</a></p>
+        </article>
+
+        <article>
+          <span class="tag">03</span>
+          <h3>Hébergements</h3>
+          <p>Sélectionner un logement selon la destination, la capacite et les disponibilites.</p>
+          <p><a href="hebergements.php">Voir les hebergements</a></p>
+        </article>
+
+        <article>
+          <span class="tag">04</span>
+          <h3>Activités</h3>
+          <p>Ajouter des expériences au séjour en respectant les dates et le nombre de participants.</p>
+          <p><a href="activites.php">Voir les activites</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="planning">
+      <h2>Composition du séjour</h2>
+
+      <div class="planning-content">
+        <div>
+          <h3>Un panier de voyage clair</h3>
+          <p>
+            L'utilisateur pourra retrouver les éléments choisis dans son panier :
+            destination, transport, hebergement et activites.
+          </p>
+          <p><a class="button-link" href="panier.php">Voir le panier</a></p>
+        </div>
+
+        <div>
+          <h3>Un espace utilisateur</h3>
+          <p>
+            Après connexion, l'utilisateur pourra suivre ses réservations et recevoir
+            des notifications simples liées à son séjour.
+          </p>
+          <p><a class="second-link" href="compte.php">Acceder au compte</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="quick-links">
+      <h2>Accès rapide</h2>
+      <p>
+        <a href="sejour.php">Composer un séjour</a>
+        <a href="validation.php">Validation</a>
+        <a href="inscription.php">Inscription</a>
+        <a href="admin.php">Administration</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <small>Copyright &copy; 2026, VoyageVista - Projet Web dynamique - Malik SAADI, Edgar PRADET et Antoine DAGNEAUX</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
