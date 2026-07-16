@@ -1,27 +1,27 @@
-# Stage 1 – Pipeline de prédiction de prix immobiliers
+# Internship 1 – Real Estate Price Prediction Pipeline
 
-## Présentation
+## Overview
 
-Ce projet a été réalisé dans le cadre de mon premier stage en Data Science et Machine Learning.
+This project was completed during my first internship in **Data Science** and **Machine Learning**.
 
-L'objectif était de développer un pipeline complet permettant de prédire le **prix au mètre carré de biens immobiliers** à partir des données publiques DVF (Demandes de Valeurs Foncières), tout en expérimentant différentes approches de modélisation, de prétraitement et de visualisation.
+The objective was to develop a complete pipeline capable of predicting the **price per square meter of real estate properties** using the French public DVF (*Demandes de Valeurs Foncières*) dataset, while experimenting with different modeling, preprocessing, and visualization techniques.
 
-Le projet couvre l'ensemble du cycle de vie d'un modèle de Machine Learning : collecte des données, nettoyage, feature engineering, entraînement, optimisation et déploiement d'une interface interactive.
-
----
-
-## Objectifs du projet
-
-- Construire un pipeline complet de traitement des données
-- Nettoyer et enrichir les données DVF
-- Comparer plusieurs modèles de Machine Learning
-- Optimiser les performances des modèles
-- Intégrer une composante géographique dans les prédictions
-- Développer une interface interactive de visualisation
+The project covers the entire machine learning lifecycle, including data collection, cleaning, feature engineering, model training, optimization, and the deployment of an interactive application.
 
 ---
 
-## Technologies utilisées
+## Project Objectives
+
+- Build a complete data processing pipeline
+- Clean and enrich the DVF dataset
+- Compare multiple machine learning models
+- Optimize model performance
+- Integrate geographical features into the predictions
+- Develop an interactive visualization interface
+
+---
+
+## Technologies Used
 
 - Python
 - Pandas
@@ -36,93 +36,93 @@ Le projet couvre l'ensemble du cycle de vie d'un modèle de Machine Learning : c
 
 ---
 
-## Contenu du projet
+## Project Content
 
-### Entraînement des modèles
+### Model Training
 
-Le dépôt contient plusieurs implémentations d'algorithmes utilisées pour comprendre, comparer ou entraîner différents modèles :
+The repository includes several algorithm implementations used to understand, compare, and train different machine learning models:
 
-- Régression
-- Descente de gradient
+- Regression
+- Gradient Descent
 - K-Nearest Neighbors (KNN)
 - K-Means
-- Analyse en composantes principales (PCA)
+- Principal Component Analysis (PCA)
 
 ---
 
-### Préparation des données
+### Data Preparation
 
-Plusieurs scripts sont dédiés au traitement des données :
+Several scripts are dedicated to data processing, including:
 
-- nettoyage des fichiers DVF ;
-- fusion de plusieurs jeux de données ;
-- géocodage ;
-- création de nouvelles variables ;
-- calcul d'indicateurs géographiques.
-
----
-
-### Exploration des données
-
-Des notebooks Jupyter permettent de réaliser :
-
-- l'analyse exploratoire des données ;
-- des visualisations statistiques ;
-- des expérimentations sur différents modèles ;
-- des comparaisons de performances.
+- Cleaning DVF datasets
+- Merging multiple datasets
+- Geocoding
+- Creating new features
+- Computing geographical indicators
 
 ---
 
-### Modèle de prédiction
+### Data Exploration
 
-Le pipeline principal repose sur plusieurs étapes :
+Jupyter notebooks are provided for:
 
-- préparation des données ;
-- création des variables explicatives ;
-- séparation temporelle des jeux d'entraînement, validation et test ;
-- apprentissage des modèles ;
-- optimisation des hyperparamètres avec Optuna ;
-- évaluation des performances.
-
-Une approche combinant une tendance temporelle et un modèle XGBoost est également étudiée afin d'améliorer la précision des prédictions.
+- Exploratory Data Analysis (EDA)
+- Statistical visualizations
+- Model experimentation
+- Performance comparison
 
 ---
 
-### Application Streamlit
+### Prediction Model
 
-Une application interactive permet de :
+The main machine learning pipeline includes:
 
-- lancer les prédictions ;
-- visualiser les performances du modèle ;
-- explorer les résultats ;
-- afficher différentes statistiques et graphiques.
+- Data preparation
+- Feature engineering
+- Temporal train/validation/test splitting
+- Model training
+- Hyperparameter optimization using Optuna
+- Model evaluation
+
+A hybrid approach combining a temporal trend model with **XGBoost** is also explored to improve prediction accuracy.
 
 ---
 
-## Compétences développées
+### Streamlit Application
+
+An interactive application allows users to:
+
+- Run price predictions
+- Visualize model performance
+- Explore prediction results
+- Display interactive charts and statistics
+
+---
+
+## Skills Developed
 
 - Data Engineering
 - Data Cleaning
 - Feature Engineering
-- Analyse exploratoire de données
-- Machine Learning supervisé
+- Exploratory Data Analysis (EDA)
+- Supervised Machine Learning
 - Clustering
-- Réduction de dimension
-- Optimisation d'hyperparamètres
-- Visualisation de données
-- Développement d'applications Streamlit
+- Dimensionality Reduction
+- Hyperparameter Optimization
+- Data Visualization
+- Streamlit Application Development
 
 ---
 
-## Améliorations possibles
+## Possible Improvements
 
-- Intégration de nouvelles sources de données
-- Déploiement du modèle via une API
-- Mise à jour automatique des données
-- Explicabilité des prédictions (SHAP)
-- Entraînement distribué sur des jeux de données plus importants
-- Déploiement cloud
+- Integration of additional data sources
+- Deployment of the model as an API
+- Automatic data updates
+- Prediction explainability using SHAP
+- Distributed training on larger datasets
+- Cloud deployment
 
 ---
 
-Ce projet m'a permis d'acquérir une expérience concrète dans la conception d'un pipeline complet de **Machine Learning**, allant de la préparation de données réelles jusqu'au développement d'une application interactive de visualisation et de prédiction.
+This project provided me with hands-on experience in designing a complete **Machine Learning pipeline**, from processing real-world datasets to developing an interactive application for prediction and data visualization.
