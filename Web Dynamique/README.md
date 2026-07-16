@@ -1,27 +1,27 @@
-# Projets Web Dynamique
+# Dynamic Web Projects
 
-Ce dépôt regroupe les projets développés dans le cadre du module **Web Dynamique** à **l'ECE Paris**. Ils mettent en œuvre les technologies du développement web moderne afin de concevoir des applications web complètes, reposant sur une architecture **client–serveur**, une base de données relationnelle et une interface utilisateur dynamique.
+This repository contains projects developed as part of the **Dynamic Web Development** course at **ECE Paris**. These projects leverage modern web technologies to build complete web applications based on a **client-server architecture**, a relational database, and a dynamic user interface.
 
 ---
 
-# 1. VoyageVista – Plateforme de planification de voyages
+# 1. VoyageVista – Travel Planning Platform
 
-VoyageVista est une plateforme web permettant aux utilisateurs de rechercher, organiser et réserver des séjours en regroupant plusieurs services touristiques : destinations, transports, hébergements et activités.
+VoyageVista is a web application that allows users to search, organize, and book trips by bringing together multiple travel services, including destinations, transportation, accommodations, and activities.
 
-Le projet reproduit les principales fonctionnalités d'une agence de voyage en ligne tout en mettant l'accent sur l'architecture logicielle, la gestion des données et l'expérience utilisateur.
+The project reproduces the core features of an online travel agency while emphasizing software architecture, data management, and user experience.
 
-## Fonctionnalités principales
+## Main Features
 
-- Inscription et authentification des utilisateurs
-- Gestion des rôles (utilisateur, administrateur, prestataire)
-- Catalogue de destinations, hébergements et activités
-- Recherche et planification de trajets
-- Création de séjours personnalisés
-- Panier de réservation
-- Simulation du paiement
-- Gestion des réservations et des notifications
+- User registration and authentication
+- Role management (user, administrator, provider)
+- Destination, accommodation, and activity catalog
+- Transportation search and trip planning
+- Personalized trip creation
+- Booking cart
+- Simulated payment process
+- Reservation and notification management
 
-## Technologies utilisées
+## Technologies Used
 
 - HTML5
 - CSS3
@@ -30,21 +30,21 @@ Le projet reproduit les principales fonctionnalités d'une agence de voyage en l
 - MySQL
 - Apache (XAMPP)
 
-Le projet est entièrement documenté dans le dossier **VoyageVista/**.
+The project is fully documented in the **VoyageVista/** folder.
 
 ---
 
-# Objectifs pédagogiques communs
+# Common Learning Objectives
 
-- Concevoir des applications web dynamiques complètes
-- Développer une architecture client–serveur maintenable
-- Concevoir et exploiter une base de données relationnelle
-- Développer des interfaces utilisateur modernes et responsives
-- Gérer l'authentification, les sessions et les rôles utilisateurs
-- Structurer un projet web collaboratif avec Git
+- Design complete dynamic web applications
+- Develop a maintainable client-server architecture
+- Design and manage a relational database
+- Build modern and responsive user interfaces
+- Implement authentication, session management, and user roles
+- Structure a collaborative web development project using Git
 
 ---
 
-Chaque dossier de projet contient son propre **README.md**, les fichiers sources ainsi que la documentation associée.
+Each project folder contains its own **README.md**, source code, and associated documentation.
 
-Pour toute question ou suggestion, n'hésitez pas à me contacter.
+Feel free to contact me if you have any questions or suggestions.
