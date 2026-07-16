@@ -68,38 +68,6 @@ The platform includes the following features:
 
 ---
 
-## Project Structure
-
-```text
-Project/
-│
-├── assets/
-│   └── images/
-│
-├── PHP Files/
-│   ├── configuration
-│   ├── processing
-│   └── database management
-│
-├── index.html
-├── destinations.php
-├── transport.php
-├── accommodations.php
-├── activities.php
-├── trip.php
-├── cart.php
-├── checkout.php
-├── login.php
-├── register.php
-├── admin.php
-├── provider.php
-├── account.php
-├── database.sql
-└── style.css
-```
-
----
-
 ## Skills Developed
 
 - Full-Stack Web Development
