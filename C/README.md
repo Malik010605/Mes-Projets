@@ -1,41 +1,39 @@
-# Projet Quorridor
+# Quoridor Project
 
-## Présentation
+## Overview
 
-Ce projet est une implémentation en C du jeu de plateau **Quoridor**. Il a été réalisé dans le cadre de ma formation
-en classe préparatoire à l’ECE Paris. L’objectif était de développer un jeu complet en langage C, en structurant proprement
-le code et en respectant les règles officielles du jeu.
+This project is a **C implementation** of the board game **Quoridor**. It was developed as part of my preparatory engineering studies at **ECE Paris**. The objective was to build a complete terminal-based game while writing clean, modular code and faithfully implementing the official game rules.
 
-Le jeu est entièrement jouable en terminal, avec une interface textuelle.
+The game is fully playable through a text-based interface in the terminal.
 
-## Règles du jeu
+## Game Rules
 
-Chaque joueur doit atteindre le côté opposé du plateau en déplaçant son pion d’une case à la fois ou en plaçant des barrières
-pour ralentir l’adversaire.  
-Le plateau est une grille de 9x9 cases. Chaque joueur dispose d’un nombre limité de barrières. Les déplacements et placements
-sont régis par des règles strictes (pas de blocage total, saut d’un pion adjacent, etc.).
+Each player must reach the opposite side of the board by moving their pawn one square at a time or by placing walls to slow down their opponent.
 
-## Fonctionnalités
+The game is played on a **9×9 grid**, and each player has a limited number of walls. Pawn movements and wall placements follow the official rules, including path validation (no completely blocking an opponent) and jumping over adjacent pawns when allowed.
 
-- Affichage dynamique du plateau en terminal
-- Déplacement des joueurs selon les règles officielles
-- Placement des barrières avec vérification de validité (pas de blocage)
-- Tour par tour entre deux joueurs humains
-- Système de coordonnées pour interagir facilement avec le plateau
-- Détection automatique de la victoire
+## Features
 
-## Organisation du code
+- Dynamic board rendering in the terminal
+- Player movement following the official Quoridor rules
+- Wall placement with validity checks (preventing complete blockage)
+- Turn-based gameplay for two human players
+- Coordinate-based system for easy interaction with the board
+- Automatic win detection
 
-Le projet est structuré en plusieurs fichiers :
+## Code Organization
 
-- `main.c` : point d'entrée du programme
-- `quoridor.c / quoridor.h` : gestion de l’affichage et de l’état du plateau
-- `joueur.c / joueur.h` : fonctions liées aux déplacements des pions
-- `plateau.c / plateau.h` : vérification et placement des barrières
+The project is organized into several source files:
+
+- `main.c` – Program entry point
+- `quoridor.c / quoridor.h` – Board display and game state management
+- `joueur.c / joueur.h` – Player movement logic
+- `plateau.c / plateau.h` – Wall validation and placement
 
 ## Compilation
 
-Utilisez `gcc` pour compiler le projet. Exemple :
+Compile the project using `gcc`. For example:
 
 ```bash
 gcc main.c plateau.c joueur.c quoridor.c -o quoridor
+```
