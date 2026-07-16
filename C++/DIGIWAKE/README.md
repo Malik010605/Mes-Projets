@@ -1,41 +1,40 @@
-# Projet Digiwake – Réveil électronique avec Arduino
+# Digiwake Project – Electronic Alarm Clock with Arduino
 
-## Présentation
+## Overview
 
-Digiwake est un réveil électronique entièrement fonctionnel développé avec Arduino. 
-Ce projet a été réalisé dans le cadre de ma formation à l’ECE Paris, en C++ embarqué. Il combine programmation,
-électronique et interaction utilisateur pour concevoir un appareil simple et intuitif.
+Digiwake is a fully functional electronic alarm clock developed with Arduino.
 
-Le réveil permet à l’utilisateur de régler l’heure actuelle et l’heure d’alarme, avec affichage sur écran LCD,
-boutons de navigation, et déclenchement sonore à l’heure programmée.
+This project was completed as part of my studies at **ECE Paris** using embedded C++. It combines programming, electronics, and user interaction to create a simple and intuitive device.
 
-## Objectifs du projet
+The alarm clock allows the user to set both the current time and the alarm time. Information is displayed on an LCD screen, navigation is handled through physical buttons, and a sound signal is triggered at the programmed time.
 
-- Concevoir un réveil avec affichage digital
-- Gérer l’entrée utilisateur via des boutons physiques
-- Programmer une alarme déclenchée à heure fixe
-- Maîtriser l’utilisation de composants Arduino : RTC, écran LCD, buzzer, etc.
+## Project Objectives
 
-## Composants utilisés
+- Design an alarm clock with a digital display
+- Manage user input through physical buttons
+- Program an alarm triggered at a specific time
+- Learn how to use Arduino components such as an RTC module, LCD screen, and buzzer
 
-- Carte Arduino ATMega328P
-- Module RTC (Real-Time Clock)
-- Écran LCD 16x2 avec interface I2C
-- Buzzer actif
-- Boutons poussoirs et Potentiomètre (pour réglage heure, minutes, validation)
-- Résistances, câblage, breadboard
+## Components Used
 
-## Fonctionnalités
+- Arduino ATMega328P board
+- RTC module (Real-Time Clock)
+- 16x2 LCD screen with I2C interface
+- Active buzzer
+- Push buttons and potentiometer for setting the hour, minutes, and validation
+- Resistors, wiring, and breadboard
 
-- Affichage de l’heure en temps réel sur écran LCD
-- Réglage de l’heure et de l’alarme par l’utilisateur
-- Détection du passage à l’heure d’alarme
-- Déclenchement d’un signal sonore (buzzer)
-- Possibilité d’interrompre ou de reporter l’alarme
+## Features
 
-## Améliorations possibles
+- Real-time clock display on the LCD screen
+- User-controlled time and alarm configuration
+- Detection of the programmed alarm time
+- Sound signal triggered through the buzzer
+- Ability to stop or snooze the alarm
 
-- Ajout d’un écran OLED
-- Sauvegarde de l’alarme en EEPROM
-- Ajout d’un menu avec plusieurs alarmes
-- Interface tactile (future version)
+## Possible Improvements
+
+- Add an OLED display
+- Save the alarm configuration in EEPROM
+- Add a menu supporting multiple alarms
+- Add a touchscreen interface in a future version
