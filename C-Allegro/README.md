@@ -1,27 +1,26 @@
-# Projet Badland – Reproduction en C avec Allegro
+# Badland Project – Recreation in C with Allegro
 
-## Présentation
+## Overview
 
-Ce projet est une adaptation simplifiée du jeu **Badland**, développée en langage C avec la bibliothèque graphique **Allegro**.
-Il a été réalisé dans le cadre de ma formation à l’ECE Paris, avec pour objectif de maîtriser la programmation d’un moteur de jeu 2D,
-la gestion des collisions et l’affichage graphique en temps réel.
+This project is a simplified recreation of the game **Badland**, developed in **C** using the **Allegro** graphics library.
 
-Le joueur contrôle un personnage qui avance automatiquement dans un environnement à défilement horizontal et doit éviter les obstacles
-pour survivre.
+It was completed as part of my studies at **ECE Paris**, with the objective of learning how to build a simple 2D game engine, manage collisions, and render graphics in real time.
 
-## Objectifs pédagogiques
+The player controls a character that automatically moves through a side-scrolling environment and must avoid obstacles to survive.
 
-- Utilisation de la bibliothèque Allegro pour le rendu graphique
-- Création d’un moteur de jeu simple en 2D
-- Gestion de la physique basique : gravité, impulsion, collisions
-- Mise en place d’une boucle principale fluide et optimisée
-- Gestion des événements clavier
+## Learning Objectives
 
-## Fonctionnalités
+- Use the Allegro graphics library for rendering
+- Develop a simple 2D game engine
+- Implement basic physics: gravity, impulses, and collision detection
+- Build a smooth and optimized game loop
+- Handle keyboard input and events
 
-- Affichage d’un environnement 2D avec scrolling horizontal
-- Animation du personnage principal
-- Saut contrôlé par l’utilisateur (impulsion verticale)
-- Objets fixes servant d’obstacles
-- Détection de collisions et fin de partie
-- Écran de démarrage et écran de fin
+## Features
+
+- 2D side-scrolling environment
+- Animated main character
+- User-controlled jumping through vertical impulses
+- Static obstacles throughout the level
+- Collision detection and game over system
+- Start screen and game over screen
