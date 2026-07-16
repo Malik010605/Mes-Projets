@@ -1,81 +1,83 @@
-# Malik Saadi – Portfolio de projets
+# Malik Saadi – Project Portfolio
 
-Bienvenue sur mon dépôt GitHub !
+Welcome to my GitHub repository!
 
-Je suis étudiant en **cycle ingénieur à l'ECE Paris** et ce dépôt rassemble une sélection de projets réalisés au cours de ma formation. Ils couvrent différents domaines de l'informatique et de l'ingénierie : développement logiciel, programmation embarquée, développement web, algorithmique, théorie des graphes et simulation numérique.
+I am an engineering student at **ECE Paris**, and this repository showcases a selection of projects completed throughout my studies. They cover various fields of computer science and engineering, including software development, embedded systems, web development, algorithms, graph theory, and numerical simulation.
 
-Chaque projet possède son propre **README** détaillant son fonctionnement, les technologies utilisées ainsi que les compétences mises en œuvre.
-
----
-
-## 💻 Projets en C
-
-### Quoridor
-
-Jeu de plateau entièrement développé en C, intégrant la gestion des déplacements, des barrières, de l'intelligence de jeu et des conditions de victoire. Ce projet m'a permis de concevoir une architecture logicielle modulaire et de manipuler des structures de données complexes.
-
-### Badland (C + Allegro)
-
-Mini-jeu inspiré de *Badland*, développé en C avec la bibliothèque graphique **Allegro**. Il implémente un moteur 2D comprenant la gestion des collisions, de la gravité, des animations et des interactions utilisateur.
+Each project includes its own **README** describing its purpose, the technologies used, and the skills developed.
 
 ---
 
-## ⚡ Projets en C++ / Arduino
+# 💻 C Projects
 
-### Digiwake
+## Quoridor
 
-Réveil électronique entièrement fonctionnel développé sur Arduino.
+A board game fully developed in **C**, featuring player movement, wall placement, game logic, and win condition management. This project allowed me to design a modular software architecture and work with complex data structures.
 
-- Affichage de l'heure sur écran LCD
-- Réglage de l'heure et de l'alarme
-- Déclenchement sonore via buzzer
-- Conception électronique et programmation embarquée
+## Badland (C + Allegro)
 
-### ECE HERO
-
-Jeu musical inspiré de *Guitar Hero*.
-
-Le projet combine un piano électronique piloté par Arduino avec une interface graphique développée en Java permettant d'afficher les notes à jouer en temps réel.
-
-### Gyrobot – DrawBot
-
-Projet de robotique réalisé dans le cadre du module **Systèmes Bouclés**.
-
-Le robot est piloté par un **ESP32** et utilise plusieurs boucles d'asservissement (PID) afin de dessiner automatiquement différentes figures géométriques tout en corrigeant sa trajectoire grâce à ses capteurs (encodeurs, IMU et magnétomètre).
+A 2D game inspired by *Badland*, developed in **C** using the **Allegro** graphics library. It implements a simple game engine featuring collision detection, gravity, animations, and user interactions.
 
 ---
 
-## ☕ Projets en Java
+# ⚡ C++ / Arduino Projects
 
-### Optimisation de la collecte des déchets
+## Digiwake
 
-Application développée autour de la **théorie des graphes** permettant d'optimiser les tournées de collecte.
+A fully functional digital alarm clock developed with **Arduino**.
 
-Le projet met en œuvre différents algorithmes classiques tels que :
+**Main features:**
 
-- Plus court chemin
-- Voyageur de commerce (TSP)
-- Arbre couvrant minimum (MST)
-- Parcours eulérien
-- Coloration de graphes
+- Real-time clock display on an LCD screen
+- Time and alarm configuration
+- Buzzer alarm
+- Embedded programming and electronic circuit design
+
+## ECE HERO
+
+A music game inspired by *Guitar Hero*.
+
+The project combines an Arduino-powered electronic piano with a Java graphical interface that displays the notes to play in real time.
+
+## Gyrobot – DrawBot
+
+A robotics project developed as part of the **Closed-Loop Control Systems** course.
+
+The robot is powered by an **ESP32** and uses multiple PID control loops to automatically draw geometric shapes while continuously correcting its trajectory using wheel encoders, an IMU, and a magnetometer.
 
 ---
 
-## 🌐 Projets Web
+# ☕ Java Projects
 
-### VoyageVista
+## Waste Collection Optimization
 
-Plateforme de planification de voyages développée dans le cadre du module **Web Dynamique**.
+A Java application based on **graph theory** designed to optimize waste collection routes.
 
-L'application permet notamment :
+The project implements several classical graph algorithms, including:
 
-- la gestion des utilisateurs ;
-- la consultation de destinations ;
-- la réservation d'hébergements et d'activités ;
-- la planification d'itinéraires ;
-- la gestion d'un panier de réservation.
+- Shortest Path
+- Traveling Salesman Problem (TSP)
+- Minimum Spanning Tree (MST)
+- Eulerian Path
+- Graph Coloring
 
-Technologies utilisées :
+---
+
+# 🌐 Web Projects
+
+## VoyageVista
+
+A travel planning platform developed as part of the **Dynamic Web Development** course.
+
+The application provides features such as:
+
+- User management
+- Destination browsing
+- Accommodation and activity booking
+- Trip planning
+- Travel cart management
+
+**Technologies used:**
 
 - HTML
 - CSS
@@ -85,26 +87,26 @@ Technologies utilisées :
 
 ---
 
-## 🐍 Projets en Python
+# 🐍 Python Projects
 
-### Modélisation d'équations différentielles
+## Differential Equation Modeling
 
-Simulation numérique de systèmes physiques à l'aide de plusieurs méthodes d'intégration :
+Numerical simulation of physical systems using several integration methods:
 
-- Euler
-- Euler amélioré
-- Runge-Kutta d'ordre 2 (RK2)
-- Runge-Kutta d'ordre 4 (RK4)
+- Euler Method
+- Improved Euler Method
+- Runge-Kutta 2 (RK2)
+- Runge-Kutta 4 (RK4)
 
-Les simulations portent notamment sur :
+The simulations focus on:
 
-- un système mécanique oscillant ;
-- un circuit RLC en électronique.
+- A mechanical oscillating system
+- An electronic RLC circuit
 
-Les résultats sont visualisés avec **Matplotlib**.
+The results are visualized using **Matplotlib**.
 
 ---
 
-Chaque dossier contient le **code source**, un **README** dédié ainsi que la documentation associée.
+Each project folder contains the source code, a dedicated **README**, and the associated documentation.
 
-N'hésitez pas à parcourir les différents projets ou à me contacter si vous avez des questions ou souhaitez échanger !
+Feel free to explore the projects or contact me if you have any questions or would like to get in touch!
