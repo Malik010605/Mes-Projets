@@ -1,96 +1,96 @@
-# Projet Théorie des Graphes – Optimisation de la collecte des déchets
+# Graph Theory Project – Waste Collection Optimization
 
-## Présentation
+## Overview
 
-Ce projet a été réalisé dans le cadre de ma formation à **l'ECE Paris**, en **Java**.
+This project was developed in **Java** as part of my engineering studies at **ECE Paris**.
 
-L'objectif est de développer une application permettant de modéliser et d'optimiser l'organisation de la collecte des déchets à l'aide des concepts de **théorie des graphes** et de **programmation orientée objet**.
+The objective is to design an application that models and optimizes waste collection using **graph theory** concepts and **object-oriented programming**.
 
-Le projet met en œuvre différents algorithmes classiques (plus court chemin, parcours de graphes, arbre couvrant minimum, coloration, etc.) afin de résoudre des problématiques réelles liées aux tournées de ramassage et à la planification des collectes.
-
----
-
-## Objectifs du projet
-
-- Modéliser un réseau routier sous forme de graphe
-- Optimiser les itinéraires de collecte des déchets
-- Étudier différents algorithmes de théorie des graphes
-- Comparer plusieurs méthodes de résolution selon les contraintes imposées
-- Concevoir une architecture orientée objet en Java
-- Développer une application console multi-utilisateur
+The project implements several classical graph algorithms (shortest path, graph traversal, minimum spanning tree, graph coloring, etc.) to solve real-world problems related to waste collection routes and scheduling.
 
 ---
 
-## Technologies utilisées
+## Project Objectives
+
+- Model a road network as a graph
+- Optimize waste collection routes
+- Study and implement various graph theory algorithms
+- Compare different solving approaches under various constraints
+- Design an object-oriented architecture in Java
+- Develop a multi-user console application
+
+---
+
+## Technologies Used
 
 - Java
-- Programmation Orientée Objet (POO)
+- Object-Oriented Programming (OOP)
 - UML
-- Théorie des graphes
+- Graph Theory
 - Git / GitHub
 
 ---
 
-## Fonctionnalités
+## Features
 
-L'application permet notamment de :
+The application includes the following features:
 
-- Représenter un réseau routier sous forme de graphe pondéré
-- Calculer les plus courts chemins entre plusieurs points
-- Optimiser les tournées de collecte des encombrants
-- Optimiser les tournées de ramassage des poubelles
-- Générer des parcours pour les points de collecte
-- Comparer différentes méthodes d'optimisation
-- Planifier les jours de collecte selon les contraintes géographiques et logistiques
-- Gérer plusieurs types d'utilisateurs (collectivités et entreprise de collecte)
+- Representation of a road network as a weighted graph
+- Shortest path computation between multiple locations
+- Optimization of bulky waste collection routes
+- Optimization of household waste collection routes
+- Generation of collection routes for collection points
+- Comparison of different optimization methods
+- Collection scheduling based on geographical and logistical constraints
+- Support for multiple user roles (local authorities and waste collection companies)
 
 ---
 
-## Algorithmes étudiés
+## Algorithms Studied
 
-Au cours du projet, plusieurs problèmes classiques de théorie des graphes sont étudiés :
+Throughout the project, several classical graph problems are explored:
 
-- Plus court chemin
-- Voyageur de commerce (TSP)
-- Arbre couvrant de poids minimum (MST)
-- Parcours eulérien
-- Coloration de graphes
-- Heuristique du plus proche voisin
-- Optimisation sous contraintes
+- Shortest Path
+- Traveling Salesman Problem (TSP)
+- Minimum Spanning Tree (MST)
+- Eulerian Path
+- Graph Coloring
+- Nearest Neighbor Heuristic
+- Constraint Optimization
 
-Les performances et la complexité de ces algorithmes sont également analysées afin de comparer leurs avantages selon les différents cas d'utilisation.
+The performance and computational complexity of these algorithms are also analyzed to compare their advantages depending on the use case.
 
 ---
 
 ## Architecture
 
-Le projet suit une conception orientée objet avec :
+The project follows an object-oriented design featuring:
 
-- Une représentation des graphes (sommets, arêtes, poids)
-- Une séparation entre les modèles, les algorithmes et l'interface
-- Une interface utilisateur en mode console
-- Une architecture évolutive facilitant l'ajout de nouveaux algorithmes
-
----
-
-## Compétences développées
-
-- Théorie des graphes
-- Algorithmes d'optimisation
-- Recherche opérationnelle
-- Programmation orientée objet
-- Conception UML
-- Analyse de complexité
-- Développement Java
-- Travail en équipe
+- Graph representation (vertices, edges, and weights)
+- Separation between models, algorithms, and user interface
+- Console-based user interface
+- A scalable architecture that facilitates the integration of new algorithms
 
 ---
 
-## Améliorations possibles
+## Skills Developed
 
-- Développement d'une interface graphique (JavaFX ou Swing)
-- Import automatique de cartes réelles (OpenStreetMap)
-- Visualisation interactive des graphes
-- Gestion de plusieurs camions simultanément
-- Prise en compte du trafic en temps réel
-- Optimisation multi-objectifs (temps, coût, émissions de CO₂)
+- Graph Theory
+- Optimization Algorithms
+- Operations Research
+- Object-Oriented Programming
+- UML Design
+- Complexity Analysis
+- Java Development
+- Teamwork
+
+---
+
+## Possible Improvements
+
+- Development of a graphical user interface (JavaFX or Swing)
+- Automatic import of real-world maps (OpenStreetMap)
+- Interactive graph visualization
+- Multi-truck route management
+- Real-time traffic integration
+- Multi-objective optimization (time, cost, and CO₂ emissions)
