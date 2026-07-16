@@ -1,40 +1,40 @@
 # Gyrobot – DrawBot
 
-## Présentation
+## Overview
 
-Gyrobot est un projet de robotique réalisé dans le cadre du module **Systèmes Bouclés** à l'ECE Paris.
+Gyrobot is a robotics project developed as part of the **Closed-Loop Control Systems** course at **ECE Paris**.
 
-L'objectif est de développer un robot mobile capable de **dessiner automatiquement différentes figures géométriques** tout en utilisant des **boucles d'asservissement** afin de garantir la précision de ses déplacements.
+The objective is to design a mobile robot capable of **automatically drawing various geometric shapes** while using **closed-loop feedback control** to ensure accurate movements.
 
-Le robot est basé sur une plateforme **Gyrobot** pilotée par un **ESP32 (NodeMCU)**. Il est commandé à distance depuis une interface web via le Wi-Fi et utilise plusieurs capteurs (encodeurs, centrale inertielle et magnétomètre) pour corriger sa trajectoire en temps réel.
-
----
-
-## Objectifs du projet
-
-- Concevoir un robot mobile autonome capable de dessiner
-- Développer des asservissements en boucle fermée
-- Implémenter des correcteurs PID
-- Exploiter les données de plusieurs capteurs
-- Mettre en pratique les notions d'automatique et de robotique
-- Développer une interface de commande sans fil
+The robot is built on the **Gyrobot** platform powered by an **ESP32 (NodeMCU)**. It is remotely controlled through a web interface over Wi-Fi and relies on several sensors (wheel encoders, IMU, and magnetometer) to continuously correct its trajectory.
 
 ---
 
-## Matériel utilisé
+## Project Objectives
+
+- Design an autonomous mobile drawing robot
+- Develop closed-loop control systems
+- Implement PID controllers
+- Process data from multiple sensors
+- Apply concepts of control engineering and robotics
+- Develop a wireless control interface
+
+---
+
+## Hardware Used
 
 - NodeMCU ESP32
-- Plateforme Gyrobot
-- Deux motoréducteurs avec encodeurs
-- Centrale inertielle LSM6DS3 (IMU)
-- Magnétomètre LIS3MDL
-- Drivers moteurs DRV8837
-- Communication Wi-Fi
-- Stylo monté sur le robot pour le dessin
+- Gyrobot platform
+- Two geared DC motors with wheel encoders
+- LSM6DS3 Inertial Measurement Unit (IMU)
+- LIS3MDL Magnetometer
+- DRV8837 Motor Drivers
+- Wi-Fi communication
+- Pen mounted on the robot for drawing
 
 ---
 
-## Technologies utilisées
+## Technologies Used
 
 - C++
 - PlatformIO
@@ -43,90 +43,90 @@ Le robot est basé sur une plateforme **Gyrobot** pilotée par un **ESP32 (NodeM
 - Wi-Fi
 - LittleFS
 - PID_v1
-- HTML / CSS / JavaScript (interface web embarquée)
+- HTML / CSS / JavaScript (embedded web interface)
 
 ---
 
-## Fonctionnalités
+## Features
 
-Le projet permet notamment de :
+The project includes the following features:
 
-- Commander le robot via une interface web accessible en Wi-Fi
-- Piloter indépendamment les deux moteurs
-- Lire les encodeurs des roues
-- Exploiter les données de la centrale inertielle (IMU)
-- Utiliser le magnétomètre pour l'orientation
-- Calculer l'odométrie du robot
-- Corriger automatiquement la trajectoire grâce à des correcteurs PID
-- Enregistrer et rejouer des trajectoires
-
----
-
-## Séquences réalisées
-
-### Séquence 1 – Escalier
-
-Le robot dessine automatiquement une succession de segments droits avec des rotations à 90°.
-
-Compétences mises en œuvre :
-
-- Asservissement en position
-- Contrôle des distances
-- Contrôle des angles
-- Exploitation des encodeurs
+- Control the robot through a Wi-Fi web interface
+- Independently control both motors
+- Read wheel encoder data
+- Process IMU sensor data
+- Use the magnetometer for orientation
+- Compute the robot's odometry
+- Automatically correct the trajectory using PID controllers
+- Record and replay drawing trajectories
 
 ---
 
-### Séquence 2 – Cercle paramétrable
+## Implemented Sequences
 
-Le robot dessine un cercle dont le rayon peut être choisi directement depuis l'interface utilisateur.
+### Sequence 1 – Stair Pattern
 
-Fonctionnalités :
+The robot automatically draws a series of straight lines connected by 90° turns.
 
-- Rayon configurable
-- Synchronisation des deux roues
-- Compensation des erreurs de fermeture
-- Calibration du rayon
+**Skills involved:**
 
----
-
-### Séquence 3 – Orientation Nord
-
-Le robot s'oriente automatiquement vers le Nord magnétique avant de dessiner une figure.
-
-Cette fonctionnalité repose sur :
-
-- Le magnétomètre
-- La centrale inertielle
-- Une correction automatique de l'orientation
+- Position control
+- Distance control
+- Angle control
+- Wheel encoder processing
 
 ---
 
-## Compétences développées
+### Sequence 2 – Parametric Circle
 
-- Robotique mobile
-- Automatique
-- Asservissement numérique
-- Correcteurs PID
-- Odométrie
-- Communication Wi-Fi embarquée
-- Acquisition de données capteurs
-- Développement embarqué sur ESP32
-- Interface Web embarquée
-- Validation expérimentale
+The robot draws a circle whose radius can be selected directly from the user interface.
+
+**Features:**
+
+- Adjustable radius
+- Dual-wheel synchronization
+- Circle closure error compensation
+- Radius calibration
 
 ---
 
-## Améliorations possibles
+### Sequence 3 – North Orientation
 
-- Dessin de formes complexes (SVG)
-- Navigation autonome par points de passage
-- Cartographie de l'environnement
-- Calibration automatique des capteurs
-- Contrôle de vitesse plus avancé
-- Visualisation en temps réel de la position du robot
-- Optimisation des PID par auto-réglage
+The robot automatically aligns itself with magnetic North before drawing a figure.
+
+This functionality relies on:
+
+- The magnetometer
+- The inertial measurement unit (IMU)
+- Automatic heading correction
 
 ---
 
-Ce projet m'a permis d'approfondir les notions de **robotique**, **automatique**, **programmation embarquée** et **commande en boucle fermée**, tout en développant une architecture complète mêlant électronique, logiciel embarqué et interface utilisateur.
+## Skills Developed
+
+- Mobile robotics
+- Control engineering
+- Digital feedback control
+- PID controller tuning
+- Odometry
+- Embedded Wi-Fi communication
+- Sensor data acquisition and processing
+- Embedded development on ESP32
+- Embedded web interface development
+- Experimental validation
+
+---
+
+## Possible Improvements
+
+- Support for complex SVG drawings
+- Autonomous waypoint navigation
+- Environment mapping
+- Automatic sensor calibration
+- Advanced speed control
+- Real-time robot position visualization
+- Automatic PID tuning
+
+---
+
+This project allowed me to deepen my knowledge of **robotics**, **control engineering**, **embedded programming**, and **closed-loop control systems**, while designing a complete architecture combining electronics, embedded software, and a web-based user interface.
