@@ -1,27 +1,27 @@
-# VoyageVista – Plateforme de planification de voyages
+# VoyageVista – Travel Planning Platform
 
-## Présentation
+## Overview
 
-VoyageVista est une plateforme web dynamique développée dans le cadre du module **Web Dynamique** à l'**ECE Paris**.
+VoyageVista is a dynamic web application developed as part of the **Dynamic Web Development** course at **ECE Paris**.
 
-L'objectif du projet est de concevoir une application permettant aux utilisateurs de rechercher, organiser et réserver un séjour en regroupant différents services tels que les destinations, les transports, les hébergements et les activités.
+The objective of this project is to design a platform that allows users to search for, organize, and book trips by combining various travel services such as destinations, transportation, accommodations, and activities.
 
-Le projet repose sur une architecture **client–serveur** avec une base de données **MySQL**, offrant une expérience utilisateur fluide ainsi qu'une gestion des comptes, des réservations et des différents rôles utilisateurs. :contentReference[oaicite:0]{index=0}
-
----
-
-## Objectifs du projet
-
-- Développer une application web dynamique complète
-- Concevoir une architecture client–serveur maintenable
-- Mettre en œuvre une base de données relationnelle
-- Gérer plusieurs rôles utilisateurs
-- Simuler un processus complet de réservation de voyage
-- Développer une interface ergonomique et responsive
+The application is built on a **client-server architecture** with a **MySQL** database, providing a smooth user experience along with user account management, reservation handling, and role-based access control.
 
 ---
 
-## Technologies utilisées
+## Project Objectives
+
+- Develop a complete dynamic web application
+- Design a maintainable client-server architecture
+- Implement a relational database
+- Manage multiple user roles
+- Simulate a complete travel booking process
+- Build a responsive and user-friendly interface
+
+---
+
+## Technologies Used
 
 - HTML5
 - CSS3
@@ -32,109 +32,109 @@ Le projet repose sur une architecture **client–serveur** avec une base de donn
 
 ---
 
-## Fonctionnalités
+## Features
 
-La plateforme permet notamment de :
+The platform includes the following features:
 
-### Gestion des utilisateurs
+### User Management
 
-- Inscription et connexion
-- Gestion des sessions
-- Espace utilisateur
-- Gestion des rôles (utilisateur, prestataire, administrateur)
+- User registration and login
+- Session management
+- User dashboard
+- Role management (user, provider, administrator)
 
-### Catalogue touristique
+### Travel Catalog
 
-- Consultation des destinations
-- Recherche de séjours
-- Consultation des hébergements
-- Consultation des activités
-- Consultation des moyens de transport
+- Destination browsing
+- Trip search
+- Accommodation browsing
+- Activity browsing
+- Transportation browsing
 
-### Réservation
+### Booking System
 
-- Création d'un séjour personnalisé
-- Ajout d'éléments dans un panier
-- Validation des réservations
-- Simulation du paiement
-- Historique des réservations
+- Personalized trip creation
+- Booking cart
+- Reservation validation
+- Simulated payment process
+- Reservation history
 
 ### Administration
 
-- Gestion des contenus
-- Gestion des utilisateurs
-- Gestion des prestataires
-- Administration de la plateforme
+- Content management
+- User management
+- Provider management
+- Platform administration
 
 ---
 
-## Structure du projet
+## Project Structure
 
-```
-Projet/
+```text
+Project/
 │
 ├── assets/
 │   └── images/
 │
-├── Fichiers PHP/
+├── PHP Files/
 │   ├── configuration
-│   ├── traitements
-│   └── gestion de la base de données
+│   ├── processing
+│   └── database management
 │
 ├── index.html
 ├── destinations.php
-├── transports.php
-├── hebergements.php
-├── activites.php
-├── sejour.php
-├── panier.php
-├── validation.php
-├── connexion.php
-├── inscription.php
+├── transport.php
+├── accommodations.php
+├── activities.php
+├── trip.php
+├── cart.php
+├── checkout.php
+├── login.php
+├── register.php
 ├── admin.php
-├── prestataire.php
-├── compte.php
+├── provider.php
+├── account.php
 ├── database.sql
 └── style.css
 ```
 
 ---
 
-## Compétences développées
+## Skills Developed
 
-- Développement Web Full Stack
-- PHP orienté serveur
-- Conception de bases de données MySQL
-- Gestion des sessions utilisateurs
-- Architecture client–serveur
-- Développement d'interfaces responsives
-- Organisation d'un projet web
-- Travail en équipe avec Git
+- Full-Stack Web Development
+- Server-side PHP Development
+- MySQL Database Design
+- User Session Management
+- Client-Server Architecture
+- Responsive User Interface Development
+- Web Project Organization
+- Collaborative Development with Git
 
 ---
 
 ## Installation
 
-1. Cloner le dépôt GitHub.
-2. Placer le projet dans le dossier `htdocs` de XAMPP.
-3. Importer le fichier `database.sql` dans **phpMyAdmin**.
-4. Vérifier les paramètres de connexion à la base de données dans `config.php`.
-5. Démarrer **Apache** et **MySQL**.
-6. Accéder au projet depuis votre navigateur.
+1. Clone the GitHub repository.
+2. Place the project inside the `htdocs` directory of XAMPP.
+3. Import the `database.sql` file into **phpMyAdmin**.
+4. Configure the database connection in `config.php`.
+5. Start both **Apache** and **MySQL**.
+6. Open the application in your web browser.
 
 ---
 
-## Améliorations possibles
+## Possible Improvements
 
-- Intégration d'une API de réservation réelle
-- Paiement sécurisé
-- Notifications par e-mail
-- Gestion des favoris
-- Carte interactive des destinations
-- Avis et commentaires utilisateurs
-- Tableau de bord statistique pour les administrateurs
-- Application mobile
+- Integration of a real booking API
+- Secure payment system
+- Email notifications
+- Favorites management
+- Interactive destination map
+- User reviews and ratings
+- Administrative analytics dashboard
+- Mobile application
 
 ---
 
-Ce projet m'a permis de mettre en pratique les concepts de **développement web dynamique**, de **gestion de bases de données**, de **programmation côté serveur** et de **conception d'une application web complète** en reproduisant les principales fonctionnalités d'une plateforme moderne de planification de voyages.
+This project allowed me to gain hands-on experience in **dynamic web development**, **database management**, **server-side programming**, and the design of a complete web application by reproducing the core features of a modern travel planning platform.
