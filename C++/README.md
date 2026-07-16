@@ -1,104 +1,104 @@
-# Projets Arduino – C++
+# Arduino Projects – C++
 
-Ce dépôt regroupe plusieurs projets électroniques développés en **C++ embarqué avec Arduino et ESP32**, dans le cadre de ma formation à **l'ECE Paris**. Ces projets combinent programmation bas niveau, électronique, automatique et interaction utilisateur à travers des systèmes embarqués concrets.
+This repository contains several embedded systems projects developed in **C++ using Arduino and ESP32**, as part of my engineering studies at **ECE Paris**. These projects combine low-level programming, electronics, control systems, and user interaction through real-world embedded applications.
 
 ---
 
-# 1. Digiwake – Réveil électronique
+# 1. Digiwake – Electronic Alarm Clock
 
-Digiwake est un réveil digital entièrement fonctionnel. Il utilise un module RTC pour conserver l'heure, un écran LCD pour l'affichage, des boutons pour la navigation et un buzzer pour le déclenchement de l'alarme.
+Digiwake is a fully functional digital alarm clock. It uses an RTC module to keep track of time, an LCD screen for display, push buttons for navigation, and a buzzer to trigger the alarm.
 
-## Fonctionnalités principales
+## Main Features
 
-- Affichage de l'heure en temps réel
-- Réglage manuel de l'heure et de l'alarme
-- Déclenchement sonore à l'heure programmée
-- Interaction via boutons physiques
+- Real-time clock display
+- Manual time and alarm configuration
+- Alarm triggered at the programmed time
+- User interaction through physical buttons
 
-## Composants
+## Components
 
 - Arduino ATMega328P
-- Module RTC
-- Écran LCD 16x2 (I2C)
+- RTC Module
+- 16x2 LCD Display (I2C)
 - Buzzer
-- Boutons poussoirs
-- Potentiomètre
+- Push Buttons
+- Potentiometer
 
-Le projet est entièrement documenté dans le dossier **Digiwake/**.
+The project is fully documented in the **Digiwake/** folder.
 
 ---
 
-# 2. ECE HERO – Jeu de piano électronique
+# 2. ECE HERO – Electronic Piano Game
 
-ECE HERO est un jeu musical interactif inspiré de Guitar Hero, adapté à un piano électronique réel. Le projet combine un contrôleur Arduino qui détecte les touches jouées avec une interface graphique Java affichant les notes en temps réel.
+ECE HERO is an interactive music game inspired by *Guitar Hero*, adapted to a real electronic piano. The project combines an Arduino controller that detects played notes with a Java graphical interface displaying notes in real time.
 
-## Fonctionnalités principales
+## Main Features
 
-- Détection des touches jouées sur un clavier électronique
-- Interface graphique Java affichant les notes en temps réel
-- Synchronisation entre l'Arduino et l'application Java
-- Système de score et feedback visuel
+- Detection of keys played on an electronic keyboard
+- Java graphical interface displaying notes in real time
+- Synchronization between the Arduino and the Java application
+- Scoring system and visual feedback
 
-## Technologies utilisées
+## Technologies Used
 
 - Arduino (C++)
 - Java
-- Communication série entre Arduino et ordinateur
+- Serial communication between the Arduino and the computer
 
-Le projet est présenté dans le dossier **ECEHERO/** avec le code Arduino, le code Java ainsi que la documentation.
+The project is available in the **ECEHERO/** folder, including the Arduino code, Java application, and documentation.
 
 ---
 
-# 3. Gyrobot – DrawBot (Systèmes Bouclés)
+# 3. Gyrobot – DrawBot (Closed-Loop Control Systems)
 
-Gyrobot est un projet de robotique réalisé dans le cadre du module **Systèmes Bouclés**. L'objectif est de développer un robot autonome capable de dessiner différentes figures géométriques en utilisant des **boucles d'asservissement** et des **correcteurs PID**.
+Gyrobot is a robotics project developed as part of the **Closed-Loop Control Systems** course. The goal was to design an autonomous robot capable of drawing various geometric shapes using feedback control loops and PID controllers.
 
-Le robot est piloté par une carte **NodeMCU ESP32** et utilise plusieurs capteurs (encodeurs, IMU et magnétomètre) afin de contrôler précisément ses déplacements et son orientation. :contentReference[oaicite:0]{index=0}
+The robot is powered by a **NodeMCU ESP32** and relies on several sensors (wheel encoders, IMU, and magnetometer) to accurately control its movement and orientation.
 
-## Fonctionnalités principales
+## Main Features
 
-- Pilotage des moteurs en boucle fermée
-- Asservissement en position des roues
-- Communication sans fil entre l'ordinateur et le robot
-- Dessin de lignes, cercles et figures orientées
-- Réglage et validation de correcteurs PID
-- Exploitation des données issues des encodeurs, de l'IMU et du magnétomètre
+- Closed-loop motor control
+- Wheel position control
+- Wireless communication between the computer and the robot
+- Drawing lines, circles, and oriented shapes
+- PID controller tuning and validation
+- Processing data from wheel encoders, IMU, and magnetometer
 
-## Technologies utilisées
+## Technologies Used
 
 - ESP32 (NodeMCU)
-- C++ embarqué
-- Correcteurs PID
-- Capteurs inertiels (IMU)
-- Magnétomètre
-- Encodeurs de roues
-- Communication Wi-Fi
+- Embedded C++
+- PID Controllers
+- Inertial Measurement Unit (IMU)
+- Magnetometer
+- Wheel Encoders
+- Wi-Fi Communication
 
-## Compétences développées
+## Skills Developed
 
-- Commande de moteurs
-- Asservissement numérique
-- Régulation PID
-- Acquisition et traitement de données capteurs
-- Robotique mobile
-- Conception de systèmes embarqués
-- Validation expérimentale
+- Motor control
+- Digital feedback control
+- PID tuning
+- Sensor data acquisition and processing
+- Mobile robotics
+- Embedded systems design
+- Experimental validation
 
-Le projet est présenté dans le dossier **Gyrobot/** avec le code source, les rapports ainsi que la documentation.
-
----
-
-# Objectifs pédagogiques communs
-
-- Développer des systèmes embarqués interactifs
-- Concevoir des architectures mêlant matériel et logiciel
-- Programmer des microcontrôleurs (Arduino et ESP32)
-- Maîtriser les communications entre différentes couches (microcontrôleur ↔ interface graphique ↔ ordinateur)
-- Mettre en œuvre des algorithmes de contrôle et d'asservissement
-- Développer des compétences en électronique, automatique et robotique
+The project is available in the **Gyrobot/** folder, including the source code, reports, and documentation.
 
 ---
 
-Chaque dossier de projet contient son propre **README.md**, les fichiers sources ainsi que la documentation associée.
+# Common Learning Objectives
 
-Pour toute question ou suggestion, n'hésitez pas à me contacter.
+- Develop interactive embedded systems
+- Design hardware/software architectures
+- Program microcontrollers (Arduino and ESP32)
+- Manage communication between different layers (microcontroller ↔ graphical interface ↔ computer)
+- Implement control algorithms and feedback systems
+- Develop skills in electronics, automation, and robotics
+
+---
+
+Each project folder contains its own **README.md**, source code, and associated documentation.
+
+Feel free to contact me if you have any questions or suggestions.
