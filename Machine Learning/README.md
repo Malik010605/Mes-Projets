@@ -1,24 +1,24 @@
-# Projets Machine Learning
+# Machine Learning Projects
 
-Ce dépôt regroupe différents projets réalisés autour du **Machine Learning**, de la **Data Science** et du **Data Engineering**. Ils couvrent l'ensemble d'un pipeline de traitement de données, depuis leur collecte et leur préparation jusqu'à l'entraînement de modèles, leur évaluation et leur visualisation.
+This repository contains various projects focused on **Machine Learning**, **Data Science**, and **Data Engineering**. They cover the entire data processing pipeline, from data collection and preparation to model training, evaluation, and visualization.
 
-Les projets mettent en œuvre des techniques de prétraitement, d'analyse exploratoire, de modélisation et de déploiement d'applications de démonstration.
+The projects implement data preprocessing, exploratory data analysis, machine learning modeling, and the development of interactive demonstration applications.
 
 ---
 
-# 1. Stage 1 – Prédiction de prix immobiliers
+# 1. Internship 1 – Real Estate Price Prediction
 
-Ce projet porte sur le développement d'un pipeline complet de prédiction de prix immobiliers à partir des données publiques DVF (Demandes de Valeurs Foncières).
+This project focuses on developing a complete machine learning pipeline to predict real estate prices using the French public **DVF (Demandes de Valeurs Foncières)** dataset.
 
-Le travail comprend :
+The project includes:
 
-- collecte et préparation des données ;
-- nettoyage et enrichissement des jeux de données ;
-- expérimentation de plusieurs algorithmes de Machine Learning ;
-- optimisation des modèles ;
-- développement d'une interface interactive de visualisation.
+- Data collection and preparation
+- Data cleaning and feature engineering
+- Experimentation with several machine learning algorithms
+- Model optimization
+- Development of an interactive visualization application
 
-## Technologies utilisées
+## Technologies Used
 
 - Python
 - Pandas
@@ -29,21 +29,21 @@ Le travail comprend :
 - Plotly
 - PyDeck
 
-Le projet est entièrement documenté dans le dossier **Stage 1/**.
+The project is fully documented in the **Internship 1/** folder.
 
 ---
 
-# Objectifs pédagogiques communs
+# Common Learning Objectives
 
-- Préparer et nettoyer des données réelles
-- Concevoir un pipeline complet de Machine Learning
-- Comparer plusieurs modèles d'apprentissage
-- Optimiser les performances des modèles
-- Visualiser les résultats de manière interactive
-- Développer des applications de démonstration avec Streamlit
+- Prepare and clean real-world datasets
+- Design a complete machine learning pipeline
+- Compare different machine learning models
+- Optimize model performance
+- Visualize results through interactive dashboards
+- Develop demonstration applications using Streamlit
 
 ---
 
-Chaque dossier de projet contient son propre **README.md**, les fichiers sources ainsi que la documentation associée.
+Each project folder contains its own **README.md**, source code, and associated documentation.
 
-Pour toute question ou suggestion, n'hésitez pas à me contacter.
+Feel free to contact me if you have any questions or suggestions.
